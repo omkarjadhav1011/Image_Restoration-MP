@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Restoration</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <center>
+    <h1>Image Colorizer</h1>
+    <div class="container">
+    <form action="/upload_image" enctype="multipart/form-data" method="post">
+      <div class="form-group">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Upload a Image</div>
+
+        <div class="input-container ic2">
+          <!-- <label for="file" style="color:white;"> CHOOSE </label> -->
+          <input class="form-control" id="file" name="file" type="file">
+        </div>
+      </div>
+      <button type="submit" class="submit">Submit</button>
+      {% if error %}
+      <p style="color: crimson"> please choose an image</p>
+      {% endif %}
+    </form>
+</div>
+</center>
+  </body>
+</html>
